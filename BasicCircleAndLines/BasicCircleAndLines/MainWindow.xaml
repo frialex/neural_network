@@ -8,12 +8,17 @@
         Title="MainWindow" Height="350" Width="525">
     <Canvas>
         
-        <Ellipse Canvas.Top="100" Canvas.Left="100" Height="20" Width="20" Fill="Red"></Ellipse>
+        <Ellipse Canvas.Top="100" Canvas.Left="100" Height="20" Width="20" Fill="Red">
+           
+        </Ellipse>
         <Ellipse Canvas.Top="130" Canvas.Left="100" Height="20" Width="20" Fill="Red"></Ellipse>
         <Ellipse Canvas.Top="160" Canvas.Left="100" Height="20" Width="20" Fill="Red"></Ellipse>
 
         <Line X1="120" Y1="110" X2="200" Y2="110"
               Stroke="Green" StrokeThickness="4"
               StrokeDashArray="2,4,1,3"></Line>
+
+        <Line X1="120" Y1="140" X2="200" Y2="140"
+              Stroke="Green" StrokeThickness="4"></Line>
     </Canvas>
 </Window>
