@@ -7,12 +7,24 @@
         mc:Ignorable="d"
         Title="KernelConvView" Height="300" Width="300">
     <Grid>
-        <ListBox ItemsSource="{Binding KernelBuffer}">
+        <ListBox x:Name="OutputList"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.ItemTemplate>
-                <DataTemplate> 
-                    <TextBlock Text="{Binding Width}"></TextBlock>
+                <DataTemplate>
+                    <DockPanel>
+                        <Rectangle Width="{Binding Width}" Height="{Binding Height}" Fill="{Binding Color}"></Rectangle>
+                        <TextBlock Text="{Binding Width}"></TextBlock>
+                        <TextBlock Text="{Binding Height}"></TextBlock>
+                    </DockPanel>
+                    
                 </DataTemplate>
             </ListBox.ItemTemplate>
+
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel></VirtualizingStackPanel>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
         </ListBox>
     </Grid>
 </Window>
